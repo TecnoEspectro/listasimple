@@ -22,10 +22,10 @@ public class ListaSimple {
     
     Nodo nuevo=new Nodo();
     
-    nuevo.getNombre();
-    nuevo.getEdad();
-    nuevo.getPromedio();
-    nuevo.getEnlace();
+    nuevo.setNombre();
+    nuevo.setEdad();
+    nuevo.setPromedio();
+    nuevo.setEnlace();
     
     if(inicio==null){JOptionPane.showMessageDialog(null,"La lista esta vacia");
     inicio=nuevo;
@@ -40,13 +40,38 @@ public class ListaSimple {
     JOptionPane.showMessageDialog(null, "La lista esta vacia");
     }else{
         
-    do{JOptionPane.showMessageDialog(null, "Nombres: "+temporal.getNombre()
-            + temporal.getEdad()+
+    do{JOptionPane.showMessageDialog(null, "Nombres: "+temporal.getNombre() + " La edad es: "
+            + temporal.getEdad()+ " El promedio es: "+
             temporal.getPromedio());
-    }while(temporal.getEnlace() != null);
+    
+    temporal=temporal.getEnlace();
+    }while(temporal != null);
         
     
     }
+    }
+    
+    public void insertarFinal(String name,int edad, int promedio){
+    
+    
+    Nodo nuevo=new Nodo();
+    
+    nuevo.setNombre();
+    nuevo.setEdad();
+    nuevo.setPromedio();
+    nuevo.setEnlace();
+    
+    if(inicio==null){JOptionPane.showMessageDialog(null,"La lista esta vacia");
+    inicio=nuevo;
+    }else{
+        
+        Nodo temporal = inicio;
+        while(temporal!=null){
+        temporal.getEnlace();
+        }
+        temporal.setEnlace(nuevo);
+    }
+        
     }
     
 }

@@ -31,8 +31,8 @@ public class Menu extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         create = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        consult = new javax.swing.JButton();
+        insertarFinal = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -42,6 +42,8 @@ public class Menu extends javax.swing.JFrame {
         edad = new javax.swing.JTextPane();
         jScrollPane4 = new javax.swing.JScrollPane();
         promedio = new javax.swing.JTextPane();
+        insert3 = new javax.swing.JButton();
+        insert4 = new javax.swing.JButton();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -58,9 +60,19 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel1.setText("jLabel1");
 
-        jButton3.setText("Consultar");
+        consult.setText("Consultar");
+        consult.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                consultActionPerformed(evt);
+            }
+        });
 
-        jButton5.setText("jButton5");
+        insertarFinal.setText("Insertar Final");
+        insertarFinal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                insertarFinalActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Nombre");
 
@@ -74,10 +86,25 @@ public class Menu extends javax.swing.JFrame {
 
         jScrollPane4.setViewportView(promedio);
 
+        insert3.setText("Añadir por variable");
+        insert3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                insert3ActionPerformed(evt);
+            }
+        });
+
+        insert4.setText("Añadir por nombre");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addGap(178, 178, 178)
+                .addComponent(create)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -92,20 +119,16 @@ public class Menu extends javax.swing.JFrame {
                                     .addComponent(jLabel4))
                                 .addComponent(jLabel2))
                             .addGap(18, 18, 18)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jScrollPane4)
+                                .addComponent(jScrollPane2)))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton5)
-                    .addComponent(jButton3))
+                    .addComponent(insert4)
+                    .addComponent(insert3)
+                    .addComponent(insertarFinal)
+                    .addComponent(consult))
                 .addGap(130, 130, 130))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel3)
-                .addGap(178, 178, 178)
-                .addComponent(create)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -118,7 +141,7 @@ public class Menu extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel2)
-                                .addComponent(jButton3))
+                                .addComponent(consult))
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(29, 29, 29)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -128,18 +151,42 @@ public class Menu extends javax.swing.JFrame {
                 .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton5)
+                        .addComponent(insertarFinal)
                         .addComponent(jLabel4))
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(114, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(insert3)
+                .addGap(18, 18, 18)
+                .addComponent(insert4)
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void createActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createActionPerformed
-        objlist.insertarInicio(nombre.getText(),Integer.parseInt(edad.getText()), Integer.parseInt(promedio.getText()));
+        objlist.insertarInicio(nombre.getText(),Integer.parseInt(edad.getText()),
+                Integer.parseInt(promedio.getText()));
     }//GEN-LAST:event_createActionPerformed
+
+    private void insertarFinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insertarFinalActionPerformed
+
+        objlist.insertarFinal(nombre.getText(),Integer.parseInt(edad.getText()), Integer.parseInt(promedio.getText()));
+
+        
+        // TODO add your handling code here:
+    }//GEN-LAST:event_insertarFinalActionPerformed
+
+    private void consultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultActionPerformed
+
+        objlist.consultar();
+        
+        // TODO add your handling code here:
+    }//GEN-LAST:event_consultActionPerformed
+
+    private void insert3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insert3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_insert3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -177,10 +224,12 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton consult;
     private javax.swing.JButton create;
     private javax.swing.JTextPane edad;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton insert3;
+    private javax.swing.JButton insert4;
+    private javax.swing.JButton insertarFinal;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
