@@ -2,11 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.listassimples;
+package com.mycompany.listasimple;
 
 /**
  *
- * @author SCIS2-13
+ * @author SCIS2-01
  */
 public class Nodo {
 
@@ -23,60 +23,55 @@ public class Nodo {
     public void setEnlace(Nodo enlace) {
         this.enlace = enlace;
     }
-    private String nombre;
-    private int edad;
-    private int promedio;
-    private Nodo enlace;
-    
-    public Nodo(){
-    }
 
-
-    public Nodo(String nombre, int edad, int promedio) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.promedio = promedio;
-    }
-
+    /**
+     * @return the nombre
+     */
     public String getNombre() {
         return nombre;
     }
 
+    /**
+     * @param nombre the nombre to set
+     */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
+    /**
+     * @return the edad
+     */
     public int getEdad() {
         return edad;
     }
 
+    /**
+     * @param edad the edad to set
+     */
     public void setEdad(int edad) {
         this.edad = edad;
     }
 
-    public int getPromedio() {
+    /**
+     * @return the promedio
+     */
+    public float getPromedio() {
         return promedio;
     }
 
-    public void setPromedio(int promedio) {
+    /**
+     * @param promedio the promedio to set
+     */
+    public void setPromedio(float promedio) {
         this.promedio = promedio;
     }
-
-    void setNombre() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    void setEdad() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    void setPromedio() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    void setEnlace() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    
+    private String nombre;
+    private int edad;
+    private float promedio;
+    
+    private Nodo enlace;
+    
     
     
 }

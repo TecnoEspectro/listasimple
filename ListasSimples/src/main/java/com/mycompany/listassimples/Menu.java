@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.listassimples;
+package com.mycompany.listasimple;
 
 /**
  *
- * @author SCIS2-13
+ * @author SCIS2-01
  */
 public class Menu extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Menu
-     */
-    ListaSimple objlist = new ListaSimple();
+  
+    Listasimple objlista=new Listasimple();
+    
+    
     public Menu() {
         initComponents();
     }
@@ -27,50 +27,34 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        create = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        consult = new javax.swing.JButton();
-        insertarFinal = new javax.swing.JButton();
+        crearinicio = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        nombre = new javax.swing.JTextField();
+        edad = new javax.swing.JTextField();
+        promedio = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        nombre = new javax.swing.JTextPane();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        edad = new javax.swing.JTextPane();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        promedio = new javax.swing.JTextPane();
-        insert3 = new javax.swing.JButton();
-        insert4 = new javax.swing.JButton();
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        insertarfinal = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        create.setText("Crear Lsita Simple");
-        create.addActionListener(new java.awt.event.ActionListener() {
+        jLabel1.setText("Lista simple");
+
+        crearinicio.setText("Crear lista inicio");
+        crearinicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                createActionPerformed(evt);
+                crearinicioActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("jLabel1");
-
-        consult.setText("Consultar");
-        consult.addActionListener(new java.awt.event.ActionListener() {
+        jButton2.setText("Consultar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                consultActionPerformed(evt);
-            }
-        });
-
-        insertarFinal.setText("Insertar Final");
-        insertarFinal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                insertarFinalActionPerformed(evt);
+                jButton2ActionPerformed(evt);
             }
         });
 
@@ -80,113 +64,109 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel4.setText("Promedio");
 
-        jScrollPane2.setViewportView(nombre);
-
-        jScrollPane3.setViewportView(edad);
-
-        jScrollPane4.setViewportView(promedio);
-
-        insert3.setText("Añadir por variable");
-        insert3.addActionListener(new java.awt.event.ActionListener() {
+        insertarfinal.setText("Insertar al final");
+        insertarfinal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                insert3ActionPerformed(evt);
+                insertarfinalActionPerformed(evt);
             }
         });
 
-        insert4.setText("Añadir por nombre");
+        jButton1.setText("Agregar por posicion");
+
+        jButton3.setText("Agregar por un dato");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel3)
-                .addGap(178, 178, 178)
-                .addComponent(create)
+                .addGap(165, 165, 165)
+                .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(169, 169, 169)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addComponent(jLabel4))
-                                .addComponent(jLabel2))
-                            .addGap(18, 18, 18)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jScrollPane4)
-                                .addComponent(jScrollPane2)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(nombre, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
+                    .addComponent(edad)
+                    .addComponent(promedio))
+                .addGap(66, 66, 66)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(insert4)
-                    .addComponent(insert3)
-                    .addComponent(insertarFinal)
-                    .addComponent(consult))
-                .addGap(130, 130, 130))
+                    .addComponent(jButton3)
+                    .addComponent(jButton1)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(crearinicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(insertarfinal))
+                .addGap(39, 39, 39))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(20, 20, 20)
                 .addComponent(jLabel1)
-                .addGap(19, 19, 19)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel2)
-                                .addComponent(consult))
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(8, 8, 8)
+                        .addComponent(crearinicio)
+                        .addGap(27, 27, 27)
+                        .addComponent(jButton2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2))
                         .addGap(29, 29, 29)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
-                            .addComponent(create)))
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(47, 47, 47)
+                            .addComponent(edad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(insertarFinal)
-                        .addComponent(jLabel4))
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(promedio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(insertarfinal)))
                 .addGap(18, 18, 18)
-                .addComponent(insert3)
+                .addComponent(jButton1)
                 .addGap(18, 18, 18)
-                .addComponent(insert4)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addComponent(jButton3)
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void createActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createActionPerformed
-        objlist.insertarInicio(nombre.getText(),Integer.parseInt(edad.getText()),
-                Integer.parseInt(promedio.getText()));
-    }//GEN-LAST:event_createActionPerformed
-
-    private void insertarFinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insertarFinalActionPerformed
-
-        objlist.insertarFinal(nombre.getText(),Integer.parseInt(edad.getText()), Integer.parseInt(promedio.getText()));
-
+    private void crearinicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearinicioActionPerformed
+    
         
-        // TODO add your handling code here:
-    }//GEN-LAST:event_insertarFinalActionPerformed
-
-    private void consultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultActionPerformed
-
-        objlist.consultar();
+     objlista.insertarInicio(
+             nombre.getText(), 
+             Integer.parseInt(edad.getText()),
+             Float.parseFloat(promedio.getText()));
         
-        // TODO add your handling code here:
-    }//GEN-LAST:event_consultActionPerformed
+        
+    }//GEN-LAST:event_crearinicioActionPerformed
 
-    private void insert3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insert3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_insert3ActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+       
+        
+        objlista.consultar();
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void insertarfinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insertarfinalActionPerformed
+       
+        objlista.insertarFinal(
+             nombre.getText(), 
+             Integer.parseInt(edad.getText()),
+             Float.parseFloat(promedio.getText()));
+        
+        
+    }//GEN-LAST:event_insertarfinalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -224,22 +204,17 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton consult;
-    private javax.swing.JButton create;
-    private javax.swing.JTextPane edad;
-    private javax.swing.JButton insert3;
-    private javax.swing.JButton insert4;
-    private javax.swing.JButton insertarFinal;
+    private javax.swing.JButton crearinicio;
+    private javax.swing.JTextField edad;
+    private javax.swing.JButton insertarfinal;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextPane nombre;
-    private javax.swing.JTextPane promedio;
+    private javax.swing.JTextField nombre;
+    private javax.swing.JTextField promedio;
     // End of variables declaration//GEN-END:variables
 }

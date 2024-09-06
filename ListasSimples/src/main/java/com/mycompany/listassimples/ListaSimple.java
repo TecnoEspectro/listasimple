@@ -1,77 +1,81 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.listassimples;
+
+package com.mycompany.listasimple;
 
 import javax.swing.JOptionPane;
 
 /**
  *
- * @author SCIS2-13
+ * @author SCIS2-01
  */
-public class ListaSimple {
-    
-    Nodo inicio;
-    
-    ListaSimple(){
+public class Listasimple {
+       Nodo inicio; 
+    Listasimple(){
     inicio=null;
     }
     
-    public void insertarInicio(String name,int edad, int promedio){
+    public void insertarInicio(String nombre, int edad, float promedio){
+        Nodo nuevo=new Nodo();
+        nuevo.setNombre(nombre);
+        nuevo.setEdad(edad);
+        nuevo.setPromedio(promedio);
+        nuevo.setEnlace(null);        
+   if(inicio==null){
+   JOptionPane.showMessageDialog(null, "La lista esta vacia");   
+    inicio=nuevo;      
+   }else{       
+       nuevo.setEnlace(inicio);
+       inicio=nuevo;         
+   }}   
     
-    Nodo nuevo=new Nodo();
+    public void insertarFinal(String nombre, int edad, float promedio){
+        Nodo nuevo=new Nodo();
+        nuevo.setNombre(nombre);
+        nuevo.setEdad(edad);
+        nuevo.setPromedio(promedio);
+        nuevo.setEnlace(null);        
+   if(inicio==null){
+   JOptionPane.showMessageDialog(null, "La lista esta vacia");   
+    inicio=nuevo;   
+       }
+   else{       
+       Nodo temporal=inicio;       
+       while(temporal.getEnlace()!=null){           
+           temporal=temporal.getEnlace();
+       
+       }
+        temporal.setEnlace(nuevo);     
+       
+   }}   
     
-    nuevo.setNombre();
-    nuevo.setEdad();
-    nuevo.setPromedio();
-    nuevo.setEnlace();
     
-    if(inicio==null){JOptionPane.showMessageDialog(null,"La lista esta vacia");
-    inicio=nuevo;
-    }else{
-        nuevo.setEnlace(inicio);
-    inicio=nuevo;}
-    }
     
-    public void consultar(){
-    Nodo temporal=inicio;
-    if(inicio==null){
-    JOptionPane.showMessageDialog(null, "La lista esta vacia");
-    }else{
+    
+    
+    
+    
+    public void consultar(){    
+        Nodo temporal=inicio;        
+        if(inicio==null){
+   JOptionPane.showMessageDialog(null, "La lista esta vacia");       
+        }else{     
+            do{            
+           JOptionPane.showMessageDialog(null,
+                   "Nombre:  "+temporal.getNombre()+" LA EDAD ES :"+
+                           temporal.getEdad()+" EL PORMEDIO ES "+temporal.getPromedio());      
+           
+           temporal=temporal.getEnlace();
+                
+            }while(temporal!=null);
         
-    do{JOptionPane.showMessageDialog(null, "Nombres: "+temporal.getNombre() + " La edad es: "
-            + temporal.getEdad()+ " El promedio es: "+
-            temporal.getPromedio());
-    
-    temporal=temporal.getEnlace();
-    }while(temporal != null);
-        
-    
-    }
-    }
-    
-    public void insertarFinal(String name,int edad, int promedio){
-    
-    
-    Nodo nuevo=new Nodo();
-    
-    nuevo.setNombre();
-    nuevo.setEdad();
-    nuevo.setPromedio();
-    nuevo.setEnlace();
-    
-    if(inicio==null){JOptionPane.showMessageDialog(null,"La lista esta vacia");
-    inicio=nuevo;
-    }else{
-        
-        Nodo temporal = inicio;
-        while(temporal!=null){
-        temporal.getEnlace();
         }
-        temporal.setEnlace(nuevo);
-    }
+    
         
     }
+    
+    
+    
     
 }
