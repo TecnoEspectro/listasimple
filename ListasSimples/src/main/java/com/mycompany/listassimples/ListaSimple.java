@@ -48,7 +48,11 @@ public class Listasimple {
        }
         temporal.setEnlace(nuevo);     
        
-   }}   
+   }
+    
+    
+    
+    }   
     
     
     
@@ -75,7 +79,7 @@ public class Listasimple {
         
     }
     
-    
+    //Hacer: Buscar por posicion, por dato, eliminar por posicion, por dato y ordenar alfabeticamente de la A a la Z
     
     
 }
