@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.listasimple;
+package com.mycompany.Listassimples;
 
 /**
  *
@@ -11,7 +11,7 @@ package com.mycompany.listasimple;
 public class Menu extends javax.swing.JFrame {
 
   
-    Listasimple objlista=new Listasimple();
+    ListaSimple objlista=new ListaSimple();
     
     
     public Menu() {
